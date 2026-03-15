@@ -5,12 +5,13 @@ carregaAlgoritmo = cv2.CascadeClassifier(
     cv2.data.haarcascades + 'haarcascade_frontalface_default.xml'
 )
 
-image = cv2.imread('fotos/image-4.jpg')
+image = cv2.imread('fotos/image-5.jpg')
 
 # imagens cinzas são mais fáceis de processar, por isso convertemos a imagem para cinza
 imagemCinza = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
-faces = carregaAlgoritmo.detectMultiScale(imagemCinza)
+# ajustar parametros dependendo da imagem
+faces = carregaAlgoritmo.detectMultiScale(imagemCinza, scaleFactor=1.07, minNeighbors=3)
 
 print(faces)
 
