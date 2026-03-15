@@ -28,6 +28,8 @@ while True:
         # fazer igual anteriormente mas com 'o' para olho
         for(ox, oy, ol, oa) in detectaOlho:
             cv2.rectangle(localOlho, (ox, oy), (ox + ol, oy + oa), (0, 255, 0), 2)
+            
+        cv2.putText(frame, 'Pessoa', (x, y - 10), cv2.FONT_HERSHEY_PLAIN, 1, (0, 255, 0), 2)
         
     cv2.imshow('Video WebCam', frame)
     
