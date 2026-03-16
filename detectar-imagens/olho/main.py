@@ -9,7 +9,7 @@ CarregaOlho = cv2.CascadeClassifier(
     cv2.data.haarcascades + 'haarcascade_eye.xml'
 )
 
-image = cv2.imread('fotos/image-3.jpg')
+image = cv2.imread('fotos/image-1.jpg')
 
 # imagens cinzas são mais fáceis de processar, por isso convertemos a imagem para cinza
 imagemCinza = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
